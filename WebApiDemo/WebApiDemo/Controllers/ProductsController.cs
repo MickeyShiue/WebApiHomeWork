@@ -15,6 +15,7 @@ using WebApiDemo.Models.Repository;
 
 namespace WebApiDemo.Controllers
 {
+    [Authorize]
     public class ProductsController : ApiController
     {
         private IRepository<Product> ProudctRepository;
@@ -24,6 +25,7 @@ namespace WebApiDemo.Controllers
         }
 
         // GET: api/Products
+     
         public IQueryable<Product> GetProduct()
         {
             return ProudctRepository.GetAll();
