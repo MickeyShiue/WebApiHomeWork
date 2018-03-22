@@ -19,6 +19,7 @@ namespace WebApiDemo.Models.Repository
         public ProductRepository() 
         {
             this.db = new FabricsEntities();
+            db.Configuration.LazyLoadingEnabled = false;
         }
 
         public void Create(Product product)
